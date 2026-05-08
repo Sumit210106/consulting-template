@@ -14,18 +14,10 @@ const links = [
 
 export function Nav() {
   const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-50 transition-colors ${
-        scrolled ? "bg-[#0a0a0a]/85 backdrop-blur-xl border-b border-white/5" : "bg-transparent"
-      }`}
+      className={`fixed top-0 inset-x-0 z-50 transition-colors bg-[#0a0a0a]/85 backdrop-blur-xl border-b border-white/5`}
     >
       <div className="mx-auto max-w-[1400px] px-6 h-[72px] flex items-center justify-between">
         <a href="#top" className="flex items-center gap-2">
@@ -33,11 +25,11 @@ export function Nav() {
             <span className="h-3 w-3 rounded-full bg-lime" />
           </span>
           <span className="font-display text-[15px] tracking-tight text-cream">
-            <span className="font-script text-[19px] text-cream/80 mr-0.5">JR</span>v
+            <span className="font-display text-[19px] text-cream/80 mr-0.5">JRV</span>
             <span className="ml-1 font-display">Consult<span className="text-lime">.</span></span>
           </span>
         </a>
-        <nav className="hidden lg:flex items-center gap-1 text-[13px] text-cream/80">
+        <nav className="hidden lg:flex items-center gap-1 text-md text-cream/80">
           {links.map((l) => (
             <a key={l.href} href={l.href} className="px-4 py-2 hover:text-lime transition">
               {l.label}

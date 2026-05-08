@@ -15,35 +15,43 @@ export function Process() {
         <div className="font-mono-label text-lime mb-8 flex items-center gap-2">
           <span className="h-2 w-2 bg-lime inline-block" /> Our Process
         </div>
-        <h2 className="font-display text-balance text-[clamp(2rem,5vw,4.4rem)] leading-[1.05] tracking-[-0.02em] max-w-4xl">
-          Making business <span className="hl">placement magic</span><br /> in four moves
+        <h2 className="font-display text-balance text-[clamp(2.2rem,5vw,4.4rem)] leading-[1.05] tracking-[-0.02em] max-w-4xl mb-20">
+          Making business <span className="hl">placement magic</span> in four moves
         </h2>
 
-        <div className="mt-20 relative">
-          <div className="absolute left-1/2 top-0 bottom-0 w-px bg-cream/10 hidden md:block" />
-          <div className="space-y-20">
-            {steps.map((s, i) => (
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-y-12 md:gap-y-0">
+          {steps.map((s, i) => (
+            <div key={s.t} className="relative flex flex-col items-center text-center group">
+              {/* Connector Line (Desktop) */}
+              {i < steps.length - 1 && (
+                <div className="hidden md:block absolute top-7 left-[calc(50%+28px)] right-[calc(-50%+28px)] h-px bg-white/10 z-0" />
+              )}
+              
+              {/* Connector Line (Mobile) */}
+              {i < steps.length - 1 && (
+                <div className="block md:hidden absolute left-1/2 top-[56px] bottom-[-48px] w-px bg-white/10 z-0" />
+              )}
+
               <motion.div
-                key={s.t}
-                initial={{ opacity: 0, y: 24 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-80px" }}
-                transition={{ duration: 0.55 }}
-                className="relative"
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className="relative z-10 flex flex-col items-center"
               >
-                <div className="flex flex-col items-center text-center">
-                  <span className="font-mono-label text-cream/60 bg-cream/5 px-3 py-1 rounded-sm">STEP</span>
-                  <span className="mt-3 h-9 w-9 rounded-full border border-lime text-lime flex items-center justify-center font-display text-sm">
-                    {i + 1}
-                  </span>
-                  <div className="w-px h-6 bg-lime/60 mt-1" />
-                  <h3 className="mt-4 font-display text-2xl text-lime">{s.t}</h3>
-                  <p className="mt-3 max-w-xs text-[14px] text-cream/70 leading-relaxed">{s.d}</p>
+                {/* Step Node */}
+                <div className="flex items-center justify-center h-14 w-14 rounded-full bg-ink border border-lime text-lime font-display text-lg mb-6 group-hover:bg-lime group-hover:text-ink transition-all duration-300">
+                  {i + 1}
                 </div>
-                <div className="absolute left-1/2 -translate-x-1/2 top-32 w-[680px] max-w-[90vw] h-[280px] rounded-t-[100%] border-t border-x border-cream/10 -z-0 hidden md:block bg-gradient-to-b from-cream/[0.02] to-transparent" />
+                
+                {/* Title */}
+                <h3 className="font-display text-lg md:text-xl text-white group-hover:text-lime transition-colors max-w-[160px]">
+                  {s.t}
+                </h3>
+                <div className="mt-4 w-12 h-0.5 bg-lime/30 group-hover:w-16 transition-all duration-300" />
               </motion.div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

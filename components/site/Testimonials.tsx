@@ -9,7 +9,7 @@ const items = [
     title: "FOUNDER, HARBOR & GRAIN",
   },
   {
-    img: "https://images.unsplash.com/photo-1604754742629-3e0498a8d76c?w=1200&q=80",
+      img: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=1200&q=80",
     quote: "I thought hiring senior leaders meant endless calls and stress. JRV broke it down into simple steps, ran the process for us, and we closed two execs faster than I thought possible.",
     name: "Ryan Martinez",
     title: "CEO, IRONLEAF VENTURES",
@@ -24,33 +24,61 @@ const items = [
 
 export function Testimonials() {
   return (
-    <section id="reviews" className="theme-cream-2">
+    <section id="reviews" className="bg-cream text-ink relative overflow-hidden">
       <div className="mx-auto max-w-[1400px] px-6 py-24 md:py-32">
-        <div className="font-mono-label text-foreground/70 mb-8 flex items-center gap-2">
-          <span className="h-2 w-2 bg-foreground inline-block" /> Testimonials
+        <div className="font-mono-label text-ink mb-8 flex items-center gap-2">
+          <span className="h-2 w-2 bg-ink inline-block" /> Testimonials
         </div>
-        <h2 className="font-display text-balance text-[clamp(2rem,4.4vw,4rem)] leading-[1.05] tracking-[-0.02em] max-w-4xl">
-          From "can we really hire for this?" to <span className="hl-ink">"I can't believe they started Monday"</span> — clients share their journeys
+        <h2 className="font-display text-balance text-[clamp(2.4rem,5vw,4.4rem)] leading-[1.02] tracking-[-0.04em] max-w-4xl">
+          From "can we really hire for this?" to <span className="hl">"they started Monday"</span> — clients share their journeys
         </h2>
-        <div className="mt-16 space-y-8">
+
+        <div className="mt-20 grid md:grid-cols-3 gap-8">
           {items.map((t, i) => (
             <motion.figure
               key={t.name}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.55 }}
-              className="rounded-2xl bg-cream border border-foreground/10 overflow-hidden"
+              transition={{ duration: 0.55, delay: i * 0.1 }}
+              className="relative p-8 md:p-10 rounded-[4px] bg-ink border border-ink/5 flex flex-col h-full group overflow-hidden shadow-xl shadow-ink/5"
             >
-              <img src={t.img} alt="" className="w-full h-[300px] md:h-[420px] object-cover" />
-              <div className="p-6 md:p-10">
-                <div className="text-lime text-lg">★★★★★</div>
-                <blockquote className="mt-4 text-[15.5px] md:text-base leading-relaxed text-foreground/85 max-w-2xl">"{t.quote}"</blockquote>
-                <figcaption className="mt-6">
-                  <div className="font-display text-lg">{t.name}</div>
-                  <div className="font-mono-label text-foreground/60 mt-1">{t.title}</div>
-                </figcaption>
+              {/* pixel decoration */}
+              <div className="absolute top-0 right-0 grid grid-cols-3 w-12 h-12 opacity-30 group-hover:opacity-100 transition-opacity">
+                <div className="w-4 h-4 invisible" />
+                <div className="w-4 h-4 invisible" />
+                <div className="w-4 h-4 bg-white/20" />
+                
+                <div className="w-4 h-4 invisible" />
+                <div className="w-4 h-4 bg-white/20" />
+                <div className="w-4 h-4 bg-lime" />
+                
+                <div className="w-4 h-4 bg-white/20" />
+                <div className="w-4 h-4 bg-lime" />
+                <div className="w-4 h-4 bg-cream" />
               </div>
+
+              <div className="text-lime text-lg mb-6 tracking-widest flex gap-0.5">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                  </svg>
+                ))}
+              </div>
+
+              <blockquote className="flex-1 text-[15px] md:text-[17px] leading-relaxed text-white/80 italic font-medium">
+                &ldquo;{t.quote}&rdquo;
+              </blockquote>
+
+              <figcaption className="mt-10 pt-8 border-t border-white/5 flex items-center gap-4">
+                <div className="h-12 w-12 rounded-full overflow-hidden border border-lime/20 bg-lime/10 grayscale group-hover:grayscale-0 transition-all duration-500">
+                  <img src={t.img} alt="" className="h-full w-full object-cover" />
+                </div>
+                <div>
+                  <div className="font-display text-lg text-white group-hover:text-lime transition-colors">{t.name}</div>
+                  <div className="font-mono-label text-[11px] text-white/50 mt-0.5">{t.title}</div>
+                </div>
+              </figcaption>
             </motion.figure>
           ))}
         </div>

@@ -24,7 +24,7 @@ export function Roadblocks() {
           transition={{ duration: 0.6 }}
           className="font-display text-balance text-center text-[clamp(2.2rem,5vw,4.4rem)] leading-[1.05] tracking-[-0.02em] max-w-4xl mx-auto"
         >
-          Removing the roadblocks<br /> to your <span className="italic font-script font-normal text-[1.15em]">growth</span>
+          Removing the roadblocks  to your <span className="font-normal text-[1.15em]">growth</span>
         </motion.h2>
         <p className="mt-8 text-center text-[15px] leading-relaxed text-foreground/70 max-w-xl mx-auto">
           Hiring is full of conflicting advice and noisy opinions. We filter the noise, focus on what actually matters, and give you the kind of clarity that turns a vacancy into the right hire.

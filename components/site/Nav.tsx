@@ -26,7 +26,7 @@ export function Nav() {
           </span>
           <span className="font-display text-[15px] tracking-tight text-cream">
             <span className="font-display text-[19px] text-cream/80 mr-0.5">JRV</span>
-            <span className="ml-1 font-display">Consult<span className="text-lime">.</span></span>
+            <span className="ml-1 font-display">Consulting<span className="text-lime">.</span></span>
           </span>
         </a>
         <nav className="hidden lg:flex items-center gap-1 text-md text-cream/80">

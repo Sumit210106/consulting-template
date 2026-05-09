@@ -1,8 +1,8 @@
 const features = [
-  { t: "We listen first", d: "We start with your business, your team, and the texture of the role — not a generic JD." },
+  { t: "We listen first", d: "We start with your business, your team, and the texture of the role , not a generic JD." },
   { t: "We focus on fit", d: "Every candidate is screened against your culture and role rubric, not just keywords." },
   { t: "We move with care", d: "Calibrated shortlists in days, not months. Quality of attention over volume of CVs." },
-  { t: "With you all the way", d: "From kickoff to onboarding, we stay close — through offer, signature and start date." },
+  { t: "With you all the way", d: "From kickoff to onboarding, we stay close , through offer, signature and start date." },
 ];
 
 function Glyph({ i }: { i: number }) {

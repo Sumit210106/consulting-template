@@ -19,7 +19,7 @@ export function Numbers() {
 
         {/* heading */}
         <h2 className="font-display text-balance text-[clamp(2rem,4.5vw,3.8rem)] leading-[1.05] tracking-[-0.03em] max-w-3xl">
-          Numbers don&apos;t lie — and ours say <span className="hl-ink">you&apos;re in good hands.</span>
+          Numbers don&apos;t lie and ours say <span className="hl-ink">you&apos;re in good hands.</span>
         </h2>
 
         {/* stats card */}

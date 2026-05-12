@@ -30,7 +30,7 @@ export function Testimonials() {
           <span className="h-2 w-2 bg-ink inline-block" /> Testimonials
         </div>
         <h2 className="font-display text-balance text-[clamp(2.4rem,5vw,4.4rem)] leading-[1.02] tracking-[-0.04em] max-w-4xl">
-          From "can we really hire for this?" to <span className="hl">"they started Monday"</span> — clients share their journeys
+          From "can we really hire for this?" to <span className="hl">"they started Monday"</span>   clients share their journeys
         </h2>
 
         <div className="mt-20 grid md:grid-cols-3 gap-8">

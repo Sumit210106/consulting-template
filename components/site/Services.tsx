@@ -5,9 +5,9 @@ import team from "@/assets/team.jpg";
 import hero from "@/assets/hero.jpg";
 
 const services = [
-  { t: "Recruitment & talent acquisition", d: "End-to-end search across functions and seniority — from sourcing and screening to offer management.", img: hero },
-  { t: "CV scrutiny", d: "Forensic résumé review — verifying credentials, mapping competencies and surfacing the signal hiring managers need.", img: team },
-  { t: "Branding & employer marketing", d: "We help you sound like a place top talent actually wants to work — clear EVP, strong narrative.", img: handshake },
+  { t: "Recruitment & talent acquisition", d: "End-to-end search across functions and seniority, from sourcing and screening to offer management.", img: hero },
+  { t: "CV scrutiny", d: "Forensic résumé review and verifying credentials, mapping competencies and surfacing the signal hiring managers need.", img: team },
+  { t: "Employer Branding", d: "We help you sound like a place top talent actually wants to work with a clear EVP and strong narrative.", img: handshake },
   { t: "Compensation guidance", d: "Calibrated, current benchmarks so your offer wins without overpaying.", img: hero },
   { t: "Onboarding support", d: "We stick around after signature so the first 90 days don't undo the search.", img: team },
 ];

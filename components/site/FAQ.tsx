@@ -4,11 +4,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Plus } from "lucide-react";
 
 const faqs = [
-  { q: "What kind of roles do you place?", a: "Across functions — from individual contributors to senior leadership. We're at our best with calibrated, role-specific hires rather than volume recruiting." },
+  { q: "What kind of roles do you place?", a: "Across functions from individual contributors to senior leadership. We're at our best with calibrated, role-specific hires rather than volume recruiting." },
   { q: "How do you charge?", a: "Engagement-based retainers and success fees, scoped to the role. We share pricing transparently after a discovery call so there are no surprises." },
   { q: "How fast can you deliver a shortlist?", a: "Most mandates produce a calibrated 3–5 candidate shortlist within 10–14 days. Specialised executive searches can run longer." },
   { q: "What happens if a hire doesn't work out?", a: "Every placement is backed by a guarantee period and a single replacement at no additional fee, subject to engagement terms." },
-  { q: "Do you support international hiring?", a: "Yes — we run searches across multiple geographies and partner with you on compliance, comp benchmarks and onboarding." },
+  { q: "Do you support international hiring?", a: "Yes , we run searches across multiple geographies and partner with you on compliance, comp benchmarks and onboarding." },
 ];
 
 export function FAQ() {

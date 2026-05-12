@@ -17,7 +17,7 @@ export function About() {
         </div>
         <div className="grid lg:grid-cols-12 gap-10 items-start rule-bottom pb-16">
           <h2 className="lg:col-span-7 font-display text-balance text-[clamp(2rem,4.6vw,4rem)] leading-[1.05] tracking-[-0.02em]">
-            We're <span className="hl">JRV Consulting</span> , placing the right people in the right roles since day one.
+            We're <span className="hl">JRV Consulting,</span> placing the right people in the right roles since day one.
           </h2>
           <div className="lg:col-span-5 text-cream/70 text-[15px] leading-relaxed">
             <p>

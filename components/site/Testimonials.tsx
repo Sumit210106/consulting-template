@@ -22,7 +22,11 @@ const items = [
   },
 ];
 
-export function Testimonials() {
+import { Brand } from "@/lib/brands";
+
+export function Testimonials({ brand }: { brand?: Brand }) {
+  const activeBrand = brand || { displayName: "JRV" };
+
   return (
     <section id="reviews" className="bg-cream text-ink relative overflow-hidden">
       <div className="mx-auto max-w-[1400px] px-6 py-24 md:py-32">
@@ -67,7 +71,7 @@ export function Testimonials() {
               </div>
 
               <blockquote className="flex-1 text-[15px] md:text-[17px] leading-relaxed text-white/80 italic font-medium">
-                &ldquo;{t.quote}&rdquo;
+                &ldquo;{t.quote.replaceAll("JRV", activeBrand.displayName)}&rdquo;
               </blockquote>
 
               <figcaption className="mt-10 pt-8 border-t border-white/5 flex items-center gap-4">

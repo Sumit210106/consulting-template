@@ -8,16 +8,20 @@ const cards = [
   { t: "We keep it honest", d: "Clear scopes, transparent feedback, no resume spam, no theatrics." },
 ];
 
-export function About() {
+import { Brand } from "@/lib/brands";
+
+export function About({ brand }: { brand?: Brand }) {
+  const activeBrand = brand || { displayName: "JRV" };
+
   return (
     <section id="about" className="bg-ink text-cream">
       <div className="mx-auto max-w-[1400px] px-6 py-24 md:py-32">
         <div className="font-mono-label text-lime mb-10 flex items-center gap-2">
-          <span className="h-2 w-2 bg-lime inline-block" /> About JRV
+          <span className="h-2 w-2 bg-lime inline-block" /> About {activeBrand.displayName}
         </div>
         <div className="grid lg:grid-cols-12 gap-10 items-start rule-bottom pb-16">
           <h2 className="lg:col-span-7 font-display text-balance text-[clamp(2rem,4.6vw,4rem)] leading-[1.05] tracking-[-0.02em]">
-            We're <span className="hl">JRV Consulting,</span> placing the right people in the right roles since day one.
+            We're <span className="hl">{activeBrand.displayName} Consulting,</span> placing the right people in the right roles since day one.
           </h2>
           <div className="lg:col-span-5 text-cream/70 text-[15px] leading-relaxed">
             <p>
@@ -42,7 +46,7 @@ export function About() {
         </div>
 
         <div className="mt-16 relative rounded-2xl overflow-hidden border border-cream/10">
-          <Image src={team} alt="JRV team" className="w-full h-[420px] md:h-[560px] object-cover" />
+          <Image src={team} alt={`${activeBrand.displayName} team`} className="w-full h-[420px] md:h-[560px] object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-ink/40 to-transparent" />
           <div className="absolute bottom-6 left-6 font-display text-3xl md:text-5xl text-cream">
             BOLD<span className="text-cream/60">PLACE</span><span className="text-lime">.</span>

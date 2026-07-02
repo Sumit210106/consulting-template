@@ -12,8 +12,11 @@ const links = [
   { label: "Contact", href: "#contact" },
 ];
 
-export function Nav() {
+import { Brand } from "@/lib/brands";
+
+export function Nav({ brand }: { brand?: Brand }) {
   const [open, setOpen] = useState(false);
+  const activeBrand = brand || { displayName: "JRV" };
 
   return (
     <header
@@ -25,7 +28,7 @@ export function Nav() {
             <span className="h-3 w-3 rounded-full bg-lime" />
           </span>
           <span className="font-display text-[15px] tracking-tight text-cream">
-            <span className="font-display text-[19px] text-cream/80 mr-0.5">JRV</span>
+            <span className="font-display text-[19px] text-cream/80 mr-0.5">{activeBrand.displayName}</span>
             <span className="ml-1 font-display">Consulting<span className="text-lime">.</span></span>
           </span>
         </a>

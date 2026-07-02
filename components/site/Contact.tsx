@@ -2,7 +2,10 @@
 import { useState } from "react";
 import { ArrowRight, Mail, Phone, MapPin } from "lucide-react";
 
-export function Contact() {
+import { Brand } from "@/lib/brands";
+
+export function Contact({ brand }: { brand?: Brand }) {
+  const activeBrand = brand || { email: "hello@jrvconsulting.in" };
   const [sent, setSent] = useState(false);
   return (
     <section id="contact" className="bg-ink text-cream">
@@ -19,7 +22,7 @@ export function Contact() {
               Tell us about the role. We'll respond within one business day with a calibration call and a clear next step.
             </p>
             <div className="mt-10 grid sm:grid-cols-1 gap-3 text-[13.5px] text-cream/70">
-              <div className="flex items-center gap-3"><Mail className="h-4 w-4 text-lime" /><span>hello@jrvconsulting.in</span></div>
+              <div className="flex items-center gap-3"><Mail className="h-4 w-4 text-lime" /><span>{activeBrand.email}</span></div>
               <div className="flex items-center gap-3"><Phone className="h-4 w-4 text-lime" /><span>+91 00000 00000</span></div>
               <div className="flex items-center gap-3"><MapPin className="h-4 w-4 text-lime" /><span>Remote-first · India</span></div>
             </div>

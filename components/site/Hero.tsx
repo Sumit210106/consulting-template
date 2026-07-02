@@ -19,7 +19,10 @@ const tickerItems = [
   { icon: "✦", t: "QUALITY CANDIDATE PLACEMENT" },
 ];
 
-export function Hero() {
+import { Brand } from "@/lib/brands";
+
+export function Hero({ brand }: { brand?: Brand }) {
+  const activeBrand = brand || { displayName: "JRV", tagline: "JRV Consulting helps organisations manage their most valuable asset — people. Quality candidate placement, calibrated to your culture and goals." };
   const bgImage =
     "https://framerusercontent.com/images/Q94oslWo6RLM85eXJ5lNnH2FMc.jpg?width=1920&height=1080";
 
@@ -32,7 +35,7 @@ export function Hero() {
       <div className="absolute inset-0">
         <Image
           src={bgImage}
-          alt="JRV Consulting"
+          alt={`${activeBrand.displayName} Consulting`}
           fill
           className="object-cover brightness-[0.62] contrast-[1.1]"
           priority
@@ -140,9 +143,7 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="text-lime text-[17px] md:text-[19px] leading-[1.45] lg:text-right max-w-sm ml-auto font-medium"
             >
-              JRV Consulting helps organisations manage their most valuable
-              asset , people. Quality candidate placement, calibrated to your
-              culture and goals, every step of the way.
+              {activeBrand.tagline}
             </motion.p>
           </div>
         </div>

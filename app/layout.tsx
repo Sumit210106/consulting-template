@@ -1,29 +1,33 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
+import { BRANDS } from "@/lib/brands";
+
+const defaultBrand = BRANDS.jrv;
+
 export const metadata: Metadata = {
   title: {
-    default: "JRV Consulting | Premium Recruitment & Talent Acquisition",
-    template: "%s | JRV Consulting",
+    default: `${defaultBrand.displayName} Consulting | ${defaultBrand.description}`,
+    template: `%s | ${defaultBrand.displayName} Consulting`,
   },
-  description: "JRV Consulting helps organisations manage their most valuable asset — people. Quality candidate placement, calibrated to your culture and goals.",
-  keywords: ["Recruitment", "Talent Acquisition", "CV Scrutiny", "HR Consulting", "JRV Consulting"],
-  authors: [{ name: "JRV Consulting" }],
+  description: defaultBrand.tagline,
+  keywords: ["Recruitment", "Talent Acquisition", "CV Scrutiny", "HR Consulting", `${defaultBrand.displayName} Consulting`],
+  authors: [{ name: `${defaultBrand.displayName} Consulting` }],
   robots: {
     index: true,
     follow: true,
   },
   openGraph: {
-    title: "JRV Consulting | Premium Recruitment & Talent Acquisition",
-    description: "Quality candidate placement, calibrated to your culture and goals.",
+    title: `${defaultBrand.displayName} Consulting | ${defaultBrand.description}`,
+    description: defaultBrand.tagline,
     type: "website",
     locale: "en_US",
-    siteName: "JRV Consulting",
+    siteName: `${defaultBrand.displayName} Consulting`,
   },
   twitter: {
     card: "summary_large_image",
-    title: "JRV Consulting | Premium Recruitment & Talent Acquisition",
-    description: "Quality candidate placement, calibrated to your culture and goals.",
+    title: `${defaultBrand.displayName} Consulting | ${defaultBrand.description}`,
+    description: defaultBrand.tagline,
   },
 };
 

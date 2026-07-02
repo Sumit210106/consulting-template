@@ -17,14 +17,15 @@ export const BRANDS: Record<string, Brand> = {
     tagline:
       "JRV Consulting helps organisations manage their most valuable asset — people. Quality candidate placement, calibrated to your culture and goals.",
   },
-  anmol: {
-    id: "anmol",
-    name: "anmol",
-    displayName: "anmol",
-    email: "hello@anmolconsulting.in",
-    description: "Premium Recruitment & Talent Acquisition",
+  "anmol-kanodia": {
+    // 1. URL ka path badalne ke liye is key ko badlein (e.g., website.com/anmol-kanodia)
+    id: "anmol-kanodia", // Isko upar ki key ke sath hamesha match rakhin taaki dynamic route load ho sake
+    name: "Anmol Kanodia", // Short ya default brand name
+    displayName: "Anmol Kanodia", // Page heading aur titles mein display hone wala naam
+    email: "hello@anmolconsulting.in", // Form aur dynamic contacts ke liye email
+    description: "Premium Recruitment & Talent Acquisition", // Header text ke niche ka short description
     tagline:
-      "anmol Consulting helps organisations manage their most valuable asset — people. Quality candidate placement, calibrated to your culture and goals.",
+      "Anmol Kanodia Consulting helps organisations manage their most valuable asset — people. Quality candidate placement, calibrated to your culture and goals.", // Detail text ya hero page introduction description
   },
   test: {
     id: "test",

@@ -17,7 +17,7 @@ export async function generateMetadata({
   const foundBrand = getBrandBySlug(slug);
   if (!foundBrand) return { title: "Item not found" };
   return {
-    title: `${foundBrand.displayName} Consulting | ${foundBrand.description}`,
+    title: `${foundBrand.displayName} | ${foundBrand.description}`,
     description: foundBrand.tagline,
   };
 }

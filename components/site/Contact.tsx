@@ -3,8 +3,10 @@ import { useState } from "react";
 import { ArrowRight, Mail, Phone, MapPin } from "lucide-react";
 
 import { Brand } from "@/lib/brands";
+import { Country } from "@/lib/countries";
 
-export function Contact({ brand }: { brand?: Brand }) {
+
+export function Contact({ brand, country }: { brand?: Brand; country: Country }) {
   const activeBrand = brand || { email: "hello@jrvconsulting.in" };
   const [sent, setSent] = useState(false);
   return (
@@ -24,7 +26,7 @@ export function Contact({ brand }: { brand?: Brand }) {
             <div className="mt-10 grid sm:grid-cols-1 gap-3 text-[13.5px] text-cream/70">
               <div className="flex items-center gap-3"><Mail className="h-4 w-4 text-lime" /><span>{activeBrand.email}</span></div>
               <div className="flex items-center gap-3"><Phone className="h-4 w-4 text-lime" /><span>+91 00000 00000</span></div>
-              <div className="flex items-center gap-3"><MapPin className="h-4 w-4 text-lime" /><span>Remote-first · India</span></div>
+              <div className="flex items-center gap-3"><MapPin className="h-4 w-4 text-lime" /><span>Remote-first · {country.name}</span></div>
             </div>
           </div>
           <form

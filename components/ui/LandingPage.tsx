@@ -15,8 +15,10 @@ import { FAQ } from "@/components/site/FAQ";
 import { Contact } from "@/components/site/Contact";
 import { Footer } from "@/components/site/Footer";
 import { Brand } from "@/lib/brands";
+import { Country } from "@/lib/countries";
 
-export default function LandingPage({ brand }: { brand: Brand }) {
+
+export default function LandingPage({ brand, country }: { brand: Brand; country: Country }) {
   return (
     <main className="bg-ink text-cream antialiased">
       <Nav brand={brand} />
@@ -33,7 +35,7 @@ export default function LandingPage({ brand }: { brand: Brand }) {
       <Comparison />
       <Testimonials brand={brand} />
       <FAQ />
-      <Contact brand={brand} />
+      <Contact brand={brand} country={country} />
       <Footer brand={brand} />
     </main>
   );

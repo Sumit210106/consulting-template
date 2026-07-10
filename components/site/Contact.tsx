@@ -26,7 +26,7 @@ export function Contact({ brand, country }: { brand?: Brand; country: Country })
             <div className="mt-10 grid sm:grid-cols-1 gap-3 text-[13.5px] text-cream/70">
               <div className="flex items-center gap-3"><Mail className="h-4 w-4 text-lime" /><span>{activeBrand.email}</span></div>
               <div className="flex items-center gap-3"><Phone className="h-4 w-4 text-lime" /><span>+91 00000 00000</span></div>
-              <div className="flex items-center gap-3"><MapPin className="h-4 w-4 text-lime" /><span>Remote-first · {country.name}</span></div>
+              <div className="flex items-center gap-3"><MapPin className="h-4 w-4 text-lime" /><span>Your address here</span></div>
             </div>
           </div>
           <form

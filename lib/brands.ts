@@ -36,6 +36,15 @@ export const BRANDS: Record<string, Brand> = {
     tagline:
       "test Consulting helps organisations manage their most valuable asset — people. Quality candidate placement, calibrated to your culture and goals.",
   },
+  // newton : {
+  //   id: "newton",
+  //   name: "newton",
+  //   displayName: "newton",
+  //   email: "hello@testconsulting.in",
+  //   description: "Premium Recruitment & Talent Acquisition",
+  //   tagline:
+  //     "Newton helps organisations manage their most valuable asset — people. Quality candidate placement, calibrated to your culture and goals.",
+  // },
 };
 
 export function getBrandBySlug(slug: string): Brand | null {

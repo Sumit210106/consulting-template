@@ -10,7 +10,7 @@ export function Footer({ brand }: { brand?: Brand }) {
           {activeBrand.displayName}<span className="text-lime">.</span>
         </div>
         <div className="mt-12 flex flex-wrap items-center justify-between gap-6 text-[12.5px] text-cream/55 border-t border-cream/10 pt-6">
-          <div>© {new Date().getFullYear()} {activeBrand.displayName} Consulting. All rights reserved.</div>
+          <div>© {new Date().getFullYear()} {activeBrand.displayName}. All rights reserved.</div>
           <div className="flex gap-6">
             <a href="#about" className="hover:text-lime">About</a>
             <a href="#services" className="hover:text-lime">Services</a>

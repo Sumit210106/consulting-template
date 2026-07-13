@@ -18,8 +18,28 @@ function Glyph({ i }: { i: number }) {
 export function Features() {
   return (
     <section className="theme-cream rule-top">
-      <div className="mx-auto max-w-[1400px] px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 grid-lines-x grid-lines">
+      <div className="mx-auto max-w-[1400px]">
+        {/* Mobile: Apple-style snap carousel */}
+        <div
+          className="md:hidden flex overflow-x-auto snap-x snap-mandatory gap-0 px-6 pb-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          style={{ scrollPaddingLeft: "1.5rem" }}
+        >
+          {features.map((f, i) => (
+            <div
+              key={f.t}
+              className="snap-start shrink-0 w-[82%] first:pl-0 pr-4"
+            >
+              <div className="p-8">
+                <Glyph i={i} />
+                <h3 className="mt-6 font-display text-xl text-foreground">{f.t}</h3>
+                <p className="mt-3 text-[14px] text-foreground/70 leading-relaxed">{f.d}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Desktop / tablet: original grid, unchanged */}
+        <div className="hidden md:grid px-6 md:grid-cols-2 lg:grid-cols-4 grid-lines-x grid-lines">
           {features.map((f, i) => (
             <div key={f.t} className="p-8 md:p-10">
               <Glyph i={i} />

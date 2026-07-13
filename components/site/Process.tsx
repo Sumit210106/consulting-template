@@ -11,46 +11,72 @@ const steps = [
 export function Process() {
   return (
     <section id="process" className="bg-ink text-cream relative overflow-hidden">
-      <div className="mx-auto max-w-[1400px] px-6 py-24 md:py-32">
-        <div className="font-mono-label text-lime mb-8 flex items-center gap-2">
+      <div className="mx-auto max-w-[1400px] px-6 py-16 md:py-32">
+        <div className="font-mono-label text-lime mb-6 md:mb-8 flex items-center gap-2">
           <span className="h-2 w-2 bg-lime inline-block" /> Our Process
         </div>
-        <h2 className="font-display text-balance text-[clamp(2.2rem,5vw,4.4rem)] leading-[1.05] tracking-[-0.02em] max-w-4xl mb-20">
+        <h2 className="font-display text-balance text-[clamp(1.9rem,5vw,4.4rem)] leading-[1.05] tracking-[-0.02em] max-w-4xl mb-10 md:mb-20">
           Making business <span className="hl">placement magic</span> in four moves
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-y-12 md:gap-y-0">
+        {/* Desktop / tablet — flex row, connector is its own element (no calc-based positioning) */}
+        <div className="hidden md:flex items-start">
           {steps.map((s, i) => (
-            <div key={s.t} className="relative flex flex-col items-center text-center group">
-              {/* Connector Line (Desktop) */}
-              {i < steps.length - 1 && (
-                <div className="hidden md:block absolute top-7 left-[calc(50%+28px)] right-[calc(-50%+28px)] h-px bg-white/10 z-0" />
-              )}
-              
-              {/* Connector Line (Mobile) */}
-              {i < steps.length - 1 && (
-                <div className="block md:hidden absolute left-1/2 top-[56px] bottom-[-48px] w-px bg-white/10 z-0" />
-              )}
-
+            <div key={s.t} className="flex items-start flex-1 last:flex-none">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="relative z-10 flex flex-col items-center"
+                className="flex flex-col items-center text-center group shrink-0 w-[160px]"
               >
-                {/* Step Node */}
                 <div className="flex items-center justify-center h-14 w-14 rounded-full bg-ink border border-lime text-lime font-display text-lg mb-6 group-hover:bg-lime group-hover:text-ink transition-all duration-300">
                   {i + 1}
                 </div>
-                
-                {/* Title */}
-                <h3 className="font-display text-lg md:text-xl text-white group-hover:text-lime transition-colors max-w-[160px]">
+                <h3 className="font-display text-lg md:text-xl text-white group-hover:text-lime transition-colors">
                   {s.t}
                 </h3>
                 <div className="mt-4 w-12 h-0.5 bg-lime/30 group-hover:w-16 transition-all duration-300" />
               </motion.div>
+
+              {i < steps.length - 1 && (
+                <div className="flex-1 h-px bg-white/10 mt-7 mx-2" />
+              )}
             </div>
+          ))}
+        </div>
+
+        {/* Mobile — compact horizontal timeline */}
+        <div className="md:hidden flex flex-col">
+          {steps.map((s, i) => (
+            <motion.div
+              key={s.t}
+              initial={{ opacity: 0, x: -12 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: i * 0.08 }}
+              className="relative flex gap-4 group"
+            >
+              {/* Node + connector column */}
+              <div className="flex flex-col items-center shrink-0">
+                <div className="flex items-center justify-center h-9 w-9 rounded-full bg-ink border border-lime text-lime font-display text-sm group-hover:bg-lime group-hover:text-ink transition-all duration-300">
+                  {i + 1}
+                </div>
+                {i < steps.length - 1 && (
+                  <div className="w-px flex-1 min-h-[28px] bg-white/10 my-1" />
+                )}
+              </div>
+
+              {/* Text */}
+              <div className={i < steps.length - 1 ? "pb-6" : ""}>
+                <h3 className="font-display text-base text-white group-hover:text-lime transition-colors leading-snug pt-1.5">
+                  {s.t}
+                </h3>
+                <p className="mt-1.5 text-sm text-cream/60 leading-relaxed">
+                  {s.d}
+                </p>
+              </div>
+            </motion.div>
           ))}
         </div>
       </div>

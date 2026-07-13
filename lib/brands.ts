@@ -17,16 +17,7 @@ export const BRANDS: Record<string, Brand> = {
     tagline:
       "JRV Consulting helps organisations manage their most valuable asset — people. Quality candidate placement, calibrated to your culture and goals.",
   },
-  "anmol-kanodia": {
-    // 1. URL ka path badalne ke liye is key ko badlein (e.g., website.com/anmol-kanodia)
-    id: "anmol-kanodia", // Isko upar ki key ke sath hamesha match rakhin taaki dynamic route load ho sake
-    name: "Anmol Kanodia", // Short ya default brand name
-    displayName: "Anmol Kanodia", // Page heading aur titles mein display hone wala naam
-    email: "hello@anmolconsulting.in", // Form aur dynamic contacts ke liye email
-    description: "Premium Recruitment & Talent Acquisition", // Header text ke niche ka short description
-    tagline:
-      "Anmol Kanodia Consulting helps organisations manage their most valuable asset — people. Quality candidate placement, calibrated to your culture and goals.", // Detail text ya hero page introduction description
-  },
+
   test: {
     id: "test",
     name: "test",
@@ -36,15 +27,87 @@ export const BRANDS: Record<string, Brand> = {
     tagline:
       "test Consulting helps organisations manage their most valuable asset — people. Quality candidate placement, calibrated to your culture and goals.",
   },
-  // newton : {
-  //   id: "newton",
-  //   name: "newton",
-  //   displayName: "newton",
-  //   email: "hello@testconsulting.in",
-  //   description: "Premium Recruitment & Talent Acquisition",
-  //   tagline:
-  //     "Newton helps organisations manage their most valuable asset — people. Quality candidate placement, calibrated to your culture and goals.",
-  // },
+
+  pqsmitra: {
+    id: "pqsmitra",
+    name: "PQSMitra",
+    displayName: "PQSMitra",
+    email: "hello@pqsmitraconsulting.in",
+    description: "Premium Recruitment & Talent Acquisition",
+    tagline:
+      "PQSMitra Consulting helps organisations manage their most valuable asset — people. Quality candidate placement, calibrated to your culture and goals.",
+  },
+
+  mangoconsulting: {
+    id: "mangoconsulting",
+    name: "Mango Consulting",
+    displayName: "Mango Consulting",
+    email: "hello@mangoconsulting.in",
+    description: "Premium Recruitment & Talent Acquisition",
+    tagline:
+      "Mango Consulting helps organisations manage their most valuable asset — people. Quality candidate placement, calibrated to your culture and goals.",
+  },
+
+  "bmore-consulting": {
+    id: "bmore-consulting",
+    name: "B-More Consulting",
+    displayName: "B-More Consulting",
+    email: "hello@bmoreconsulting.in",
+    description: "Premium Recruitment & Talent Acquisition",
+    tagline:
+      "B-More Consulting helps organisations manage their most valuable asset — people. Quality candidate placement, calibrated to your culture and goals.",
+  },
+
+  "kaizen-consultancy": {
+    id: "kaizen-consultancy",
+    name: "Kaizen Consultancy Services",
+    displayName: "Kaizen Consultancy Services",
+    email: "hello@kaizenconsultancy.in",
+    description: "Premium Recruitment & Talent Acquisition",
+    tagline:
+      "Kaizen Consultancy Services helps organisations manage their most valuable asset — people. Quality candidate placement, calibrated to your culture and goals.",
+  },
+
+  "do-great-consulting": {
+    id: "do-great-consulting",
+    name: "Do-Great Consulting",
+    displayName: "Do-Great Consulting",
+    email: "hello@dogreatconsulting.in",
+    description: "Premium Recruitment & Talent Acquisition",
+    tagline:
+      "Do-Great Consulting helps organisations manage their most valuable asset — people. Quality candidate placement, calibrated to your culture and goals.",
+  },
+
+  "laxmi-consultancy": {
+    id: "laxmi-consultancy",
+    name: "Laxmi Consultancy",
+    displayName: "Laxmi Consultancy",
+    email: "hello@laxmiconsultancy.in",
+    description: "Premium Recruitment & Talent Acquisition",
+    tagline:
+      "Laxmi Consultancy helps organisations manage their most valuable asset — people. Quality candidate placement, calibrated to your culture and goals.",
+  },
+
+  "k-vigour-hr-consultant": {
+    id: "k-vigour-hr-consultant",
+    name: "K-Vigour HR Consultant",
+    displayName: "K-Vigour HR Consultant",
+    email: "hello@kvigourhrconsultant.in",
+    description: "Premium Recruitment & Talent Acquisition",
+    tagline:
+      "K-Vigour HR Consultant helps organisations manage their most valuable asset — people. Quality candidate placement, calibrated to your culture and goals.",
+  },
+
+  "maa-consultancy": {
+    id: "maa-consultancy",
+    name: "Maa Consultancy",
+    displayName: "Maa Consultancy",
+    email: "hello@maaconsultancy.in",
+    description: "Premium Recruitment & Talent Acquisition",
+    tagline:
+      "Maa Consultancy helps organisations manage their most valuable asset — people. Quality candidate placement, calibrated to your culture and goals.",
+  },
+
 };
 
 export function getBrandBySlug(slug: string): Brand | null {

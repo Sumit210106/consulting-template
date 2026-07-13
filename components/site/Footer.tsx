@@ -1,7 +1,7 @@
 import { Brand } from "@/lib/brands";
 
 export function Footer({ brand }: { brand?: Brand }) {
-  const activeBrand = brand || { displayName: "JRV" };
+  const activeBrand = brand || { displayName: "CONSULT" };
 
   return (
     <footer className="bg-ink text-cream">

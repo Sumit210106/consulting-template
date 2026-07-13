@@ -5,13 +5,13 @@ import { motion, AnimatePresence } from "framer-motion";
 const items = [
   {
     img: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=1200&q=80",
-    quote: "Our hiring plan was a notebook full of scribbles. In a few weeks JRV turned it into a clear strategy with a real funnel and a launch date — I went from feeling like an imposter to feeling like a proper founder.",
+    quote: "Our hiring plan was a notebook full of scribbles. In a few weeks  turned it into a clear strategy with a real funnel and a launch date — I went from feeling like an imposter to feeling like a proper founder.",
     name: "Cassian Holt",
     title: "FOUNDER, HARBOR & GRAIN",
   },
   {
       img: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=1200&q=80",
-    quote: "I thought hiring senior leaders meant endless calls and stress. JRV broke it down into simple steps, ran the process for us, and we closed two execs faster than I thought possible.",
+    quote: "I thought hiring senior leaders meant endless calls and stress , broke it down into simple steps, ran the process for us, and we closed two execs faster than I thought possible.",
     name: "Ryan Martinez",
     title: "CEO, IRONLEAF VENTURES",
   },
@@ -77,7 +77,7 @@ function TestimonialCard({
       <StarRow />
 
       <blockquote className="flex-1 text-[15px] md:text-[17px] leading-relaxed text-white/80 italic font-medium">
-        &ldquo;{t.quote.replaceAll("JRV", activeBrand.displayName)}&rdquo;
+        &ldquo;{t.quote.replaceAll("CONSULT", activeBrand.displayName)}&rdquo;
       </blockquote>
 
       <figcaption className="mt-10 pt-8 border-t border-white/5 flex items-center gap-4">
@@ -94,7 +94,7 @@ function TestimonialCard({
 }
 
 export function Testimonials({ brand }: { brand?: Brand }) {
-  const activeBrand = brand || { displayName: "JRV" };
+  const activeBrand = brand || { displayName: "CONSULT" };
   const [index, setIndex] = useState(0);
   const [direction, setDirection] = useState(0);
 

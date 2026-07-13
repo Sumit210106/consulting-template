@@ -3,32 +3,32 @@ import "./globals.css";
 
 import { BRANDS } from "@/lib/brands";
 
-const defaultBrand = BRANDS.jrv;
+const defaultBrand = BRANDS.test;
 
 export const metadata: Metadata = {
   title: {
     default: `${defaultBrand.displayName} Consulting | ${defaultBrand.description}`,
-    template: `%s | ${defaultBrand.displayName} Consulting`,
+    template: ``,
   },
-  description: defaultBrand.tagline,
-  keywords: ["Recruitment", "Talent Acquisition", "CV Scrutiny", "HR Consulting", `${defaultBrand.displayName} Consulting`],
-  authors: [{ name: `${defaultBrand.displayName} Consulting` }],
-  robots: {
-    index: true,
-    follow: true,
-  },
-  openGraph: {
-    title: `${defaultBrand.displayName} Consulting | ${defaultBrand.description}`,
-    description: defaultBrand.tagline,
-    type: "website",
-    locale: "en_US",
-    siteName: `${defaultBrand.displayName} Consulting`,
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: `${defaultBrand.displayName} Consulting | ${defaultBrand.description}`,
-    description: defaultBrand.tagline,
-  },
+  // description: defaultBrand.tagline,
+  // keywords: ["Recruitment", "Talent Acquisition", "CV Scrutiny", "HR Consulting", `${defaultBrand.displayName} Consulting`],
+  // authors: [{ name: `${defaultBrand.displayName} Consulting` }],
+  // robots: {
+  //   index: true,
+  //   follow: true,
+  // },
+  // openGraph: {
+  //   title: `${defaultBrand.displayName} Consulting | ${defaultBrand.description}`,
+  //   description: defaultBrand.tagline,
+  //   type: "website",
+  //   locale: "en_US",
+  //   siteName: `${defaultBrand.displayName} Consulting`,
+  // },
+  // twitter: {
+  //   card: "summary_large_image",
+  //   title: `${defaultBrand.displayName} Consulting | ${defaultBrand.description}`,
+  //   description: defaultBrand.tagline,
+  // },
 };
 
 export const viewport: Viewport = {

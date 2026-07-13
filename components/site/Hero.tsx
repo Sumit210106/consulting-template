@@ -22,7 +22,7 @@ const tickerItems = [
 import { Brand } from "@/lib/brands";
 
 export function Hero({ brand }: { brand?: Brand }) {
-  const activeBrand = brand || { displayName: "JRV", tagline: "JRV helps organisations manage their most valuable asset — people. Quality candidate placement, calibrated to your culture and goals." };
+  const activeBrand = brand || { displayName: "CONSULT", tagline: "CONSULT helps organisations manage their most valuable asset — people. Quality candidate placement, calibrated to your culture and goals." };
   const bgImage =
     "https://framerusercontent.com/images/Q94oslWo6RLM85eXJ5lNnH2FMc.jpg?width=1920&height=1080";
 

@@ -16,7 +16,7 @@ import { Brand } from "@/lib/brands";
 
 export function Nav({ brand }: { brand?: Brand }) {
   const [open, setOpen] = useState(false);
-  const activeBrand = brand || { displayName: "JRV" };
+  const activeBrand = brand || { displayName: "CONSULT" };
 
   return (
     <header

@@ -11,7 +11,7 @@ const cards = [
 import { Brand } from "@/lib/brands";
 
 export function About({ brand }: { brand?: Brand }) {
-  const activeBrand = brand || { displayName: "JRV" };
+  const activeBrand = brand || { displayName: "CONSULT" };
 
   return (
     <section id="about" className="bg-ink text-cream">

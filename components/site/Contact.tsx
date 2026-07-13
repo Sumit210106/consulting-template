@@ -7,7 +7,7 @@ import { Country } from "@/lib/countries";
 
 
 export function Contact({ brand, country }: { brand?: Brand; country: Country }) {
-  const activeBrand = brand || { email: "hello@jrvconsulting.in" };
+  const activeBrand = brand || { email: "hello@consulting.in" };
   const [sent, setSent] = useState(false);
   return (
     <section id="contact" className="bg-ink text-cream">
